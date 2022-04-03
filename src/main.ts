@@ -1,8 +1,8 @@
 import './style.css'
+import {BoardGamejs} from "./logic/boardgame" 
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+const bg = new BoardGamejs();
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+document.addEventListener('DOMContentLoaded', function () {
+  bg.Run();
+});
